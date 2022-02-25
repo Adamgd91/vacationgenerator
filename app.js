@@ -9,3 +9,10 @@ const restaurantsOptions = [
 ];
 const transportationModesOptions = ["Car", "Bike", "Bus", "Plane", "Scooter"];
 const entertainmentOptions = ["Movie", "Beach", "Mall", "Golfing", "Concert"];
+
+const trip = {
+  destination: null,
+  restuarant: null,
+  transportation: null,
+  entertainment: null,
+};
