@@ -16,3 +16,8 @@ const trip = {
   transportation: null,
   entertainment: null,
 };
+
+function getRandomValue(options) {
+  const random = Math.floor(Math.random() * destinationsOptions.length);
+  return options[random];
+}
