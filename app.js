@@ -7,7 +7,7 @@ const restaurantsOptions = [
   "McDs",
   "Zaxby's",
 ];
-const transportationModesOptions = ["Car", "Bike", "Bus", "Plane", "Scooter"];
+const transportationOptions = ["Car", "Bike", "Bus", "Plane", "Scooter"];
 const entertainmentOptions = ["Movie", "Beach", "Mall", "Golfing", "Concert"];
 
 const trip = {
@@ -21,3 +21,25 @@ function getRandomValue(options) {
   const random = Math.floor(Math.random() * destinationsOptions.length);
   return options[random];
 }
+
+function makeDestinationSelections() {
+  const randomDestinationOptions = getRandomValue(destinationsOptions);
+  const userChoice = prompt(
+    `Do you want to have a Day Trip to ${randomDestinationOptions}?`
+  );
+  if (userChoice.toLowerCase() === "yes") {
+    return randomDestinationOptions;
+  } else {
+    return makeDestinationSelections(destinationsOptions);
+  }
+}
+
+function dayTrip() {
+  trip.destination = makeDestinationSelections(destinationsOptions);
+  //   trip.restuarant = makeRestaurantSelections(restaurantsOptions);
+  //   trip.transportation = makeTransportationSelection(transportationOptions);
+  // trip.entertainment = makeEntertainmentSelections(entertainmentOptions);
+  console.log(trip);
+}
+
+dayTrip();
