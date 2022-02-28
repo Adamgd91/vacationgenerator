@@ -2,7 +2,13 @@
 const destinationsOptions = ["Utah", "Texas", "Minnesota", "Georgia", "Kansas"];
 const restaurantsOptions = ["Subway", "Burger King", "Chipotle", "McDs", "Zax"];
 const transportationOptions = ["Car", "Bike", "Bus", "Plane", "Scooter"];
-const entertainmentOptions = ["Movie", "Beach", "Mall", "Golfing", "Concert"];
+const entertainmentOptions = [
+  "Movie",
+  "Beach",
+  "Mall",
+  "Sports Event",
+  "Concert",
+];
 
 const trip = {
   destination: null,
@@ -71,3 +77,9 @@ function dayTrip() {
 }
 
 dayTrip();
+
+alert(`- Your Day Trip - \n
+Good luck in ${trip.destination}! \n
+You're eating at ${trip.restuarant}! \n
+You're travel method is ${trip.transportation}! \n
+Your entertainment while in ${trip.destination} is a ${trip.entertainment}!`);
